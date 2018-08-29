@@ -1,6 +1,16 @@
 # Mais Vida
 
 ## Backend Spring Boot 2.0.4
+### requerimentos mínimos
+ - Java 8
+ 
+### Ambiente utilizado
+```
+java version "1.8.0_172"
+Java(TM) SE Runtime Environment (build 1.8.0_172-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.172-b11, mixed mode)
+```
+
 
 ### Utilizado SPRING INITIALIZR
 - [SPRING INITIALIZR](https://start.spring.io/)
