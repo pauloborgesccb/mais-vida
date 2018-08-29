@@ -1,7 +1,7 @@
 # Mais Vida
 
 ## Backend Spring Boot 2.0.4
-### requerimentos mínimos
+### Requerimentos mínimos
  - Java 8
  
 ### Ambiente utilizado
@@ -15,17 +15,17 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.172-b11, mixed mode)
 ### Utilizado SPRING INITIALIZR
 - [SPRING INITIALIZR](https://start.spring.io/)
 
-### build
+### Build
 ```$ mvn package #A partir da pasta 'backend'```
 
-### run
+### Run
 ```$ java -jar ./target/maisvida-0.0.1-SNAPSHOT.jar #A partir da pasta 'backend'```
 
-### swagger
+### Swagger
  - Para acessar o swagger (*caso não seja alterado application.properties) [http://localhost:8090/swagger-ui.html](http://localhost:8090/swagger-ui.html)
 
 ## Frontend (ANGULAR 6)
-### requerimentos mínimos
+### Requerimentos mínimos
  - [NodeJS 8.9+](https://nodejs.org/en/) [* Recomendado utilizar nvm](https://github.com/creationix/nvm)
 
 ### Libs utilizadas
@@ -42,7 +42,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.172-b11, mixed mode)
 
 
 ## Banco de dados MySQL 8
-### requerimentos mínimos
+### Requerimentos mínimos
  - [MySQL Workbench *Para vizulizar/editar modelo](https://dev.mysql.com/downloads/workbench/)
  - [MER (.mwb e .png) /Scripts (.sql)](/mer)
  - [Docker](https://docs.docker.com/docker-for-windows/install/)
