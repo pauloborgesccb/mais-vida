@@ -4,6 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -17,14 +18,17 @@ public class Documento {
     private int idDocumento;
 
     @Basic
+    @NotNull(message = "Número do documento obrigatório")
     @Column(name = "no_numero", nullable = true, length = 45)
     private String noNumero;
 
     @Basic
+    @NotNull(message = "Tipo do documento obrigatório")
     @Column(name = "no_tipo", nullable = true, length = 200)
     private String noTipo;
 
     @ManyToOne
+    @NotNull(message = "O documento deve estar associado a uma pessoa")
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
 }

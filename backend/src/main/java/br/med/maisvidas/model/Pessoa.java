@@ -3,6 +3,7 @@ package br.med.maisvidas.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
@@ -14,10 +15,12 @@ public class Pessoa {
     private int idPessoa;
 
     @Basic
+    @NotNull(message = "Nome da pessoa é um campo obrigatório")
     @Column(name = "no_pessoa", nullable = false, length = 200)
     private String noPessoa;
 
     @OneToOne
+    @NotNull(message = "A pessoa pessoa deve estar associada a um estado federativo")
     @JoinColumn(name = "id_estado")
     private Estado estado;
 
