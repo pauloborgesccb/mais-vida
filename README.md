@@ -5,10 +5,13 @@
 - [SPRING INITIALIZR](https://start.spring.io/)
 
 ### build
-```$ npm install```
+```$ mvn package #A partir da pasta 'backend'```
 
 ### run
-```$ npm install```
+```$ java -jar ./target/maisvida-0.0.1-SNAPSHOT.jar #A partir da pasta 'backend'```
+
+### swagger
+ - Para acessar o swagger (*caso não seja alterado application.properties) [http://localhost:8090/swagger-ui.html](http://localhost:8090/swagger-ui.html)
 
 ## Frontend (ANGULAR 6)
 ### requerimentos mínimos
@@ -20,11 +23,11 @@
   
 ### Instalar pacotes
  
-```$ npm install```
+```$ npm install #A partir da pasta 'frontend'```
 
 ### Iniciar server
 
-```$ ng serve --open ## ou $ npm run start```
+```$ ng serve --open ## ou $ npm run start #A partir da pasta 'frontend'```
 
 
 ## Banco de dados MySQL 8
