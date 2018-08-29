@@ -70,6 +70,9 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+-- -----------------------------------------------------
+-- Inserts table `db_mais_vida`.`tb_estado`
+-- -----------------------------------------------------
 INSERT INTO db_mais_vida.tb_estado (sg_estado, no_estado) VALUES ('AC', 'Acre');
 INSERT INTO db_mais_vida.tb_estado (sg_estado, no_estado) VALUES ('AL', 'Alagoas');
 INSERT INTO db_mais_vida.tb_estado (sg_estado, no_estado) VALUES ('AM', 'Amazonas');
