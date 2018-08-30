@@ -17,14 +17,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/pessoa", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/estado", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class EstadoResource {
 
     @Autowired
     private EstadoService estadoService;
 
     @ApiOperation(
-            value = "Retorna todas Uf's"
+            value = "Retorna todos estados federativos do Brasil"
     )
     @GetMapping(value = "")
     @ResponseBody
