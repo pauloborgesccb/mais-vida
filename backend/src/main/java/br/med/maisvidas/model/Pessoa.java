@@ -1,11 +1,16 @@
 package br.med.maisvidas.model;
 
-
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
+import javax.persistence.*;
 import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
+@EqualsAndHashCode
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_pessoa", schema = "db_mais_vida", catalog = "")
 public class Pessoa {
