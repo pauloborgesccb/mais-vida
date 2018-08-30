@@ -1,16 +1,13 @@
 package br.med.maisvidas.model;
 
 import lombok.EqualsAndHashCode;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.util.Objects;
-
+@EqualsAndHashCode
 @Getter
 @Setter
-@EqualsAndHashCode
 @Entity
 @Table(name = "tb_estado", schema = "db_mais_vida", catalog = "")
 public class Estado {
