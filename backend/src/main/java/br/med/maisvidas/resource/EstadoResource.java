@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/pessoa", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class EstadoResource {
 
     @Autowired
@@ -26,11 +26,11 @@ public class EstadoResource {
     @ApiOperation(
             value = "Retorna todas Uf's"
     )
-    @GetMapping(value = "/estado")
+    @GetMapping(value = "")
     @ResponseBody
     public ResponseEntity<?> getUf() {
         List<Estado> estados = this.estadoService.listarTodosEstados();
         Resposta resposta = RespostaBuilder.getBuilder().resposta(estados).build();
-        return new ResponseEntity<Resposta>(resposta, HttpStatus.OK);
+        return new ResponseEntity<>(resposta, HttpStatus.OK);
     }
 }
