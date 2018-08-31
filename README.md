@@ -24,13 +24,19 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.172-b11, mixed mode)
 ### Swagger
  - Para acessar o swagger (*caso não seja alterado application.properties) [http://localhost:8090/swagger-ui.html](http://localhost:8090/swagger-ui.html)
 
-## Frontend (ANGULAR 6)
+## Frontend (Angular 6)
 ### Requerimentos mínimos
  - [NodeJS 8.9+](https://nodejs.org/en/) [* Recomendado utilizar nvm](https://github.com/creationix/nvm)
 
+### Ambiente utilizado
+
+```
+node v8.11.2 (npm v5.6.0)
+```
+
 ### Libs utilizadas
  - [Angular 6](https://angular.io/)
- - [Material designer](https://getmdl.io/)
+ - [Angular Material](https://material.angular.io/)
   
 ### Instalar pacotes
  

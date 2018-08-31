@@ -1,0 +1,24 @@
+<mat-list *ngIf="pessoas">
+  <h3 matSubheader>Pessoas</h3>
+  <mat-list-item *ngFor="let pessoa of pessoas">
+    <h3 matLine> {{pessoa.noPessoa}} </h3>
+    <p matLine>
+      <span> {{pessoa.estado.noEstado}}  - {{pessoa.estado.sgEstado}}</span>
+    </p>
+    <button mat-icon-button (click)="criarPessoa('/pessoa/', pessoa.idPessoa)">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<mat-card *ngIf="!pessoas">
+  <mat-card-title>Nenhuma pessoa cadastrada ainda</mat-card-title>
+  <mat-card-content>click no botão adicionar para adicionar uma nova pessoa</mat-card-content>
+</mat-card>
+
+
+<button mat-fab (click)="criarPessoa('/pessoa', '')">+</button>

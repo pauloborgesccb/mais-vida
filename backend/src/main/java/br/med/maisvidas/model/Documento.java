@@ -1,6 +1,8 @@
 package br.med.maisvidas.model;
 
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 import lombok.Getter;
@@ -28,6 +30,7 @@ public class Documento {
     private String noTipo;
 
     @ManyToOne
+    @JsonBackReference
     @NotNull(message = "O documento deve estar associado a uma pessoa")
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
