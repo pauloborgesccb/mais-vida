@@ -1,13 +1,20 @@
-.grid-container {
+.form {
     margin: 20px;
 }
 
-example-form {
-    min-width: 150px;
-    max-width: 500px;
+.container {
+    right: 50%;
+    transform: translate(20%, 25%);
+    width: 70%;
+}
+h1 {
+    text-align: center;
+}
+
+.mat-form-field {
     width: 100%;
 }
 
-.example-full-width {
+.mat-table {
     width: 100%;
 }

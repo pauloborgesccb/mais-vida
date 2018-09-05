@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Atenção</h1>
+<div mat-dialog-content>
+  <p>Deseja realmente remover esse registro?</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="remover()">Sim</button>
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Não</button>
+</div>

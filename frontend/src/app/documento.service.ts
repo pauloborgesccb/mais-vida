@@ -19,4 +19,8 @@ export class DocumentoService {
         )
       );
   }
+
+  removeDocumento(idDocumento: number) {
+    return this.httpClient.delete(this.env.documento + '/' + idDocumento);
+  }
 }

@@ -10,13 +10,12 @@ import {
   MatIconModule,
   MatListModule, MatSelectModule,
   MatSidenavModule, MatTableModule,
-  MatToolbarModule, MatGridListModule, MatMenuModule, MatInputModule, MatTreeModule, MatDividerModule
+  MatToolbarModule, MatGridListModule, MatMenuModule, MatInputModule, MatDividerModule, MatDialogModule
 } from "@angular/material";
 import { LayoutModule } from "@angular/cdk/layout";
 import { RouterModule, Routes } from "@angular/router";
-import { PessoaPageComponent } from './pessoa-page/pessoa-page.component';
-import { DocumentoPageComponent } from './documento-page/documento-page.component';
-import { HomePageComponent } from './home-page/home-page.component';
+import { DialogAddDocumento, PessoaPageComponent } from './pessoa-page/pessoa-page.component';
+import { DialogRemoverPessoa, HomePageComponent } from './home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
@@ -24,17 +23,16 @@ const appRoutes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomePageComponent },
   { path: 'pessoas', component: PessoaPageComponent },
-  { path: 'pessoa/:id', component: PessoaPageComponent },
-  { path: 'documentos', component: DocumentoPageComponent },
-  { path: 'documento/:id', component: DocumentoPageComponent }
+  { path: 'pessoa/:id', component: PessoaPageComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     PessoaPageComponent,
-    DocumentoPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    DialogRemoverPessoa,
+    DialogAddDocumento
   ],
   imports: [
     BrowserModule,
@@ -56,7 +54,12 @@ const appRoutes: Routes = [
     MatGridListModule,
     MatMenuModule,
     MatInputModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    DialogRemoverPessoa,
+    DialogAddDocumento
   ],
   providers: [],
   bootstrap: [AppComponent]

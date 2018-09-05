@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from "../environments/environment";
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
+import { Pessoa } from "../model/pessoa";
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,17 @@ export class PessoaService {
           (res: any) => res.resposta
         )
       );
+  }
+
+  removerPessoa(idPessoa: number) {
+    return this.httpClient.delete(this.env.pessoa + '/' + idPessoa);
+  }
+
+  salvarPessoa(pessoa: Pessoa) {
+    if (pessoa.idPessoa) {
+      return this.httpClient.put(this.env.pessoa + '/' + pessoa.idPessoa, pessoa);
+    }
+    return this.httpClient.post(this.env.pessoa , pessoa);
   }
 
   getPessoa(idPessoa: number) {

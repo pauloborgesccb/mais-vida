@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Documento</h1>
+<div mat-dialog-content>
+  <p>Adicionar novo documento</p>
+  <mat-form-field>
+    <input matInput placeholder="Tipo" [(ngModel)]="documento.noTipo">
+  </mat-form-field>
+  <br/>
+  <mat-form-field>
+    <input matInput placeholder="Número" [(ngModel)]="documento.noNumero">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="documento" cdkFocusInitial>Adiconar Documento</button>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+</div>
