@@ -15,7 +15,7 @@ import lombok.Setter;
 @Table(name = "tb_documento", schema = "db_mais_vida", catalog = "")
 public class Documento {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_documento", nullable = false)
     private int idDocumento;
 

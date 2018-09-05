@@ -5,6 +5,7 @@ import br.med.maisvidas.model.Pessoa;
 import br.med.maisvidas.repository.DocumentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class DocumentoService {
         return this.documentoRepository.findAllByPessoa(pessoa);
     }
 
+    @Transactional
     public void remover(int idDocumento) {
         this.documentoRepository.deleteByIdDocumento(idDocumento);
     }

@@ -15,7 +15,7 @@ import lombok.Setter;
 @Table(name = "tb_pessoa", schema = "db_mais_vida", catalog = "")
 public class Pessoa {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pessoa", nullable = false)
     private int idPessoa;
 

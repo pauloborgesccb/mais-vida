@@ -61,7 +61,7 @@ public class PessoaResource {
     }
 
     @ApiOperation(value = "Criar nova pessoa")
-    @PutMapping(value = "")
+    @PostMapping(value = "")
     @ResponseBody
     public ResponseEntity<Resposta> create(
             @Validated @RequestBody Pessoa pessoaData

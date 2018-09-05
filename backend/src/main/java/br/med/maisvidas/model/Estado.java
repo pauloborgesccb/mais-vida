@@ -13,7 +13,7 @@ import lombok.Setter;
 public class Estado {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_estado", nullable = false)
     private int idEstado;
 
